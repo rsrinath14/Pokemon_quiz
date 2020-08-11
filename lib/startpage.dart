@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Options.dart';
 
 class StartPage extends StatelessWidget {
   @override
@@ -7,26 +8,37 @@ class StartPage extends StatelessWidget {
         body: Column(
       children: <Widget>[
         Expanded(
-            flex: 3,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.red,
+            flex: 5,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                alignment: Alignment.center,
+                child: Image.asset("assets/images/tauros.png"),
               ),
             )),
         Expanded(
-            flex: 6,
+            flex: 4,
             child: Container(
-              decoration: BoxDecoration(
-                color: Colors.green,
+              child: Column(
+                children: <Widget>[
+                  Options('Pikachu'),
+                  Options('Tauros'),
+                  Options('Pigiot'),
+                  Options('Onyx'),
+                ],
               ),
             )),
         Expanded(
             flex: 1,
             child: Container(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            )),
+                alignment: Alignment.topCenter,
+                child: Text(
+                  "10",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ))),
       ],
     ));
   }
