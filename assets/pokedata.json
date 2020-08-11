@@ -1,0 +1,90 @@
+[
+	{
+		"1": "assests/images/Arcanine.png",
+		"2": "assests/images/Fearow.png",
+		"3": "assests/images/Gastly.png",
+		"4": "assests/images/Hypno.png",
+		"5": "assests/images/Ivysaur.png",
+		"6": "assests/images/Moltres.png",
+		"7": "assests/images/Nidorino.png",
+		"8": "assests/images/Rapidash.png",
+		"9": "assests/images/Snorlax.png",
+		"10": "assests/images/tauros.png",
+			
+	},
+	{
+		"1": {
+			"a": "Flareon",
+			"b": "Arcanine",
+			"c": "Growlithe",
+			"d": "Flareon"
+		},
+		"2": {
+			"a": "Feaorow",
+			"b": "Spearow",
+			"c": "Moltres",
+			"d": "Zapdos"
+		},
+		"3": {
+			"a": "Cloyster",
+			"b": "Gastly",
+			"c": "Shelder",
+			"d": "Slowbro"
+		},
+		"4": {
+			"a": "Kadabra",
+			"b": "Drowzee",
+			"c": "Abra",
+			"d": "Hypno"
+		},
+		"5": {
+			"a": "Squirtle",
+			"b": "Venasaur",
+			"c": "Bulbasaur",
+			"d": "Ivysaur"
+		},
+		"6": {
+			"a": "Articuno",
+			"b": "Moltres",
+			"c": "Scyther",
+			"d": "Aerodactyl"
+		},
+		"7": {
+			"a": "Nidorino",
+			"b": "Nidoking",
+			"c": "Nidoqueen",
+			"d": "Nidoran"
+		},
+		"8": {
+			"a": "Ponyta",
+			"b": "Rapidash",
+			"c": "Growlithe",
+			"d": "Jigglypuff"
+		},
+		"9": {
+			"a": "Snorlax",
+			"b": "Charmander,
+			"c": "Slowpoke",
+			"d": "Slowbro"
+		},
+		"10": {
+			"a": "Magmar",
+			"b": "Tangela",
+			"c": "Jynx",
+			"d": "Tauros"
+		}
+			
+	},
+	{
+		"1": "Arcanine",
+		"2": "Fearow",
+		"3": "Gastly",
+		"4": "Hypno",
+		"5": "Ivysaur",
+		"6": "Moltres",
+		"7": "Nidorino",
+		"8": "Rapidash",
+		"9": "Snorlax",
+		"10": "Tauros",
+	}
+]
