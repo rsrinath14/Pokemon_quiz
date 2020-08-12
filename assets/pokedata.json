@@ -1,15 +1,15 @@
 [
 	{
-		"1": "assests/images/Arcanine.png",
-		"2": "assests/images/Fearow.png",
-		"3": "assests/images/Gastly.png",
-		"4": "assests/images/Hypno.png",
-		"5": "assests/images/Ivysaur.png",
-		"6": "assests/images/Moltres.png",
-		"7": "assests/images/Nidorino.png",
-		"8": "assests/images/Rapidash.png",
-		"9": "assests/images/Snorlax.png",
-		"10": "assests/images/tauros.png",
+		"1": "assets/images/Arcanine.png",
+		"2": "assets/images/Fearow.png",
+		"3": "assets/images/Gastly.png",
+		"4": "assets/images/Hypno.png",
+		"5": "assets/images/Ivysaur.png",
+		"6": "assets/images/Moltres.png",
+		"7": "assets/images/Nidorino.png",
+		"8": "assets/images/Rapidash.png",
+		"9": "assets/images/Snorlax.png",
+		"10": "assets/images/tauros.png"
 			
 	},
 	{
@@ -63,7 +63,7 @@
 		},
 		"9": {
 			"a": "Snorlax",
-			"b": "Charmander,
+			"b": "Charmander",
 			"c": "Slowpoke",
 			"d": "Slowbro"
 		},
@@ -85,6 +85,6 @@
 		"7": "Nidorino",
 		"8": "Rapidash",
 		"9": "Snorlax",
-		"10": "Tauros",
+		"10": "Tauros"
 	}
 ]

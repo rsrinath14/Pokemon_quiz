@@ -12,9 +12,9 @@ class _QuizState extends State<Quiz> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => StartPage(),
+        builder: (context) => getjson(),
       ));
     });
   }
