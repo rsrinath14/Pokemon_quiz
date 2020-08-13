@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
+
+import 'package:PokeQuiz/scoreScreen.dart';
 import 'package:flutter/material.dart';
+import './scoreScreen.dart';
 
 class getjson extends StatelessWidget {
   @override
@@ -42,8 +45,8 @@ class _StartPageState extends State<StartPage> {
   Color colorwrong = Colors.red;
   int marks = 0;
   int i = 1;
-  int timer = 10;
-  String showTimer = "10";
+  int timer = 5;
+  String showTimer = "5";
 
   Widget Options(String k) {
     return Padding(
@@ -78,21 +81,12 @@ class _StartPageState extends State<StartPage> {
     "d": Colors.blueGrey[900],
   };
 
+  bool cancelTimer = false;
+
+  @override
   void initState() {
     starttimer();
     super.initState();
-  }
-
-  void nextquestion() {
-    setState(() {
-      if (i < 10) {
-        i++;
-      } else {}
-      btncolor["a"] = Colors.blueGrey[900];
-      btncolor["b"] = Colors.blueGrey[900];
-      btncolor["c"] = Colors.blueGrey[900];
-      btncolor["d"] = Colors.blueGrey[900];
-    });
   }
 
   void starttimer() async {
@@ -102,6 +96,8 @@ class _StartPageState extends State<StartPage> {
         if (timer < 1) {
           t.cancel();
           nextquestion();
+        } else if (cancelTimer == true) {
+          t.cancel();
         } else {
           timer = timer - 1;
         }
@@ -111,7 +107,7 @@ class _StartPageState extends State<StartPage> {
   }
 
   void checkanswer(String k) {
-    if (mydata[1]["1"][k] == mydata[2]["1"]) {
+    if (mydata[1][i.toString()][k] == mydata[2][i.toString()]) {
       marks = marks + 1;
       colortoshow = colorright;
     } else {
@@ -119,9 +115,29 @@ class _StartPageState extends State<StartPage> {
     }
     setState(() {
       btncolor[k] = colortoshow;
+      cancelTimer = true;
     });
 
     Timer(Duration(seconds: 1), nextquestion);
+  }
+
+  void nextquestion() {
+    cancelTimer = false;
+    timer = 5;
+    setState(() {
+      if (i < 10) {
+        i++;
+      } else {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => Resultscreen(marks: marks),
+        ));
+      }
+      btncolor["a"] = Colors.blueGrey[900];
+      btncolor["b"] = Colors.blueGrey[900];
+      btncolor["c"] = Colors.blueGrey[900];
+      btncolor["d"] = Colors.blueGrey[900];
+    });
+    starttimer();
   }
 
   @override
