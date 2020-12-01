@@ -5,7 +5,7 @@ import 'package:PokeQuiz/scoreScreen.dart';
 import 'package:flutter/material.dart';
 import './scoreScreen.dart';
 
-class getjson extends StatelessWidget {
+class Getjson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -29,7 +29,7 @@ class getjson extends StatelessWidget {
 }
 
 class StartPage extends StatefulWidget {
-  List mydata;
+  final List mydata;
   StartPage({Key key, @required this.mydata}) : super(key: key);
 
   @override
@@ -37,6 +37,7 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   List mydata;
   _StartPageState(this.mydata);
 
@@ -48,28 +49,31 @@ class _StartPageState extends State<StartPage> {
   int timer = 5;
   String showTimer = "5";
 
-  Widget Options(String k) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 10.0,
-        horizontal: 20.0,
-      ),
-      child: MaterialButton(
-        onPressed: () => checkanswer(k),
-        child: Text(
-          mydata[1][i.toString()][k],
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16.0,
-          ),
+  Widget options(String k) {
+    return AbsorbPointer(
+      absorbing: cancelTimer,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          vertical: 10.0,
+          horizontal: 20.0,
         ),
-        color: btncolor[k],
-        splashColor: Colors.blueGrey[700],
-        highlightColor: Colors.blueGrey[700],
-        minWidth: 200.0,
-        height: 45.0,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        child: MaterialButton(
+          onPressed: () => checkanswer(k),
+          child: Text(
+            mydata[1][i.toString()][k],
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16.0,
+            ),
+          ),
+          color: btncolor[k],
+          splashColor: Colors.blueGrey[700],
+          highlightColor: Colors.blueGrey[700],
+          minWidth: 200.0,
+          height: 45.0,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        ),
       ),
     );
   }
@@ -89,13 +93,33 @@ class _StartPageState extends State<StartPage> {
     super.initState();
   }
 
+  showsnackBar(String data, bool correct) {
+    // Future.delayed(Duration(seconds: 5),
+    //           () => Timer(Duration(seconds: 1), nextquestion));
+    final snackBar = SnackBar(
+      duration: Duration(seconds: 800),
+      backgroundColor: correct ? Colors.green : Colors.red,
+      behavior: SnackBarBehavior.floating,
+      content: Text(data),
+      action: SnackBarAction(
+        textColor: Colors.white,
+        label: 'Next question',
+        onPressed: () {
+          Timer(Duration(seconds: 1), nextquestion);
+        },
+      ),
+    );
+    _scaffoldKey.currentState.showSnackBar(snackBar);
+  }
+
   void starttimer() async {
     const onesec = Duration(seconds: 1);
     Timer.periodic(onesec, (Timer t) {
       setState(() {
         if (timer < 1) {
           t.cancel();
-          nextquestion();
+          cancelTimer = true;
+          showsnackBar('Timer Up', false);
         } else if (cancelTimer == true) {
           t.cancel();
         } else {
@@ -110,15 +134,16 @@ class _StartPageState extends State<StartPage> {
     if (mydata[1][i.toString()][k] == mydata[2][i.toString()]) {
       marks = marks + 1;
       colortoshow = colorright;
+      showsnackBar('correct Answer', true);
     } else {
       colortoshow = colorwrong;
+      showsnackBar('${mydata[2][i.toString()]} is the correct answer', false);
     }
     setState(() {
       btncolor[k] = colortoshow;
       cancelTimer = true;
+      timer = 5;
     });
-
-    Timer(Duration(seconds: 1), nextquestion);
   }
 
   void nextquestion() {
@@ -132,10 +157,8 @@ class _StartPageState extends State<StartPage> {
           builder: (context) => Resultscreen(marks: marks),
         ));
       }
-      btncolor["a"] = Colors.blueGrey[900];
-      btncolor["b"] = Colors.blueGrey[900];
-      btncolor["c"] = Colors.blueGrey[900];
-      btncolor["d"] = Colors.blueGrey[900];
+      btncolor["a"] =
+          btncolor["b"] = btncolor["c"] = btncolor["d"] = Colors.blueGrey[900];
     });
     starttimer();
   }
@@ -144,44 +167,51 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
         child: Scaffold(
+            key: _scaffoldKey,
             body: Column(
-          children: <Widget>[
-            Expanded(
-                flex: 5,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    alignment: Alignment.center,
-                    child: Image.asset(
-                      mydata[0][i.toString()],
+              children: <Widget>[
+                Expanded(
+                  flex: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 300),
+                      alignment: Alignment.center,
+                      child: cancelTimer
+                          ? Image.asset(
+                              mydata[3][i.toString()],
+                            )
+                          : Image.asset(
+                              mydata[0][i.toString()],
+                            ),
                     ),
                   ),
-                )),
-            Expanded(
-                flex: 4,
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      Options('a'),
-                      Options('b'),
-                      Options('c'),
-                      Options('d'),
-                    ],
-                  ),
-                )),
-            Expanded(
-                flex: 1,
-                child: Container(
-                    alignment: Alignment.topCenter,
-                    child: Text(
-                      showTimer,
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      child: Column(
+                        children: <Widget>[
+                          options('a'),
+                          options('b'),
+                          options('c'),
+                          options('d'),
+                        ],
                       ),
-                    ))),
-          ],
-        )),
+                    )),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          showTimer,
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ))),
+              ],
+            )),
         onWillPop: () {
           return showDialog(
               context: context,

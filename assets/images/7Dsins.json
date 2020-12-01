@@ -1,0 +1,89 @@
+[
+	{
+		"1": "Asta and Yuno are from what Village?",
+		"2": "What animal and color does the sin envy link to?",
+		"3": " What is the punishment for gluttony?",
+		"4": "Purity is a virtue for which sin?",
+		"5": "What is a virtue for pride?",
+		"6": "Who are the members of the Dark triad",
+		"7": "List one of the Arcane magic users.",
+		"8": "Getting thrown in snake pits is the punishment for which sin?",
+		"9": "Who was the author of 'The Divine Comedy', a chapter clarifying the seven deadly sins?",
+		"10": "does asta have magic"
+	},
+	{
+		"1": {
+			"a": "Royal Capital",
+			"b": "Raquay",
+			"c": "Hage",
+			"d": "Castle Town"
+		},
+		"2": {
+			"a": "horse, violet",
+			"b": "pig, orange",
+			"c": "goat, light blue",
+			"d": "dog, green"
+		},
+		"3": {
+			"a": "You'll be broken on the wheel",
+			"b": "You'll be smothered in fire and brimstone",
+			"c": "You'll be dismembered alive",
+			"d": "You'll be force-fed toads, rats and snakes."
+		},
+		"4": {
+			"a": "Anger",
+			"b": "Greed",
+			"c": "Gluttony",
+			"d": "Lust"
+		},
+		"5": {
+			"a": "Love",
+			"b": "Zeal",
+			"c": "Faith and Temperance",
+			"d": "Humility"
+		},
+		"6": {
+			"a": "Asta,Noelle,Yuno",
+			"b": "Dante,Vanica,Zenon",
+			"c": "Yami,Julios,William",
+			"d": "Vanessa,Finral,Luck"
+		},
+		"7": {
+			"a": "William Vangeance",
+			"b": "Licht",
+			"c": "Julius Novachrono",
+			"d": "Finral"
+		},
+		"8": {
+			"a": "sloth",
+			"b": "lust",
+			"c": "envy",
+			"d": "pride"
+		},
+		"9": {
+			"a": "St. Gregory The Great",
+			"b": " C.S. Lewis",
+			"c": "St. Thomas Aquinas",
+			"d": "Dante Alighieri"
+		},
+		"10": {
+			"a": "no",
+			"b": "yes",
+			"c": "some",
+			"d": "powerful magic"
+		}
+			
+	},
+	{
+		"1": "Hage",
+		"2": "Yuno",
+		"3": "You'll be force-fed toads, rats and snakes.",
+		"4": "Silver Eagles",
+		"5": "Megicula",
+		"6": "Asta,Noelle,Yuno",
+		"7": "William Vangeance",
+		"8": "Yuki Tabata",
+		"9": "Asta And Yuno, From Hage village",
+		"10": "no"
+	}
+]

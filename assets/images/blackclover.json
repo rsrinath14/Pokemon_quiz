@@ -1,0 +1,89 @@
+[
+	{
+		"1": "Asta and Yuno are from what Village?",
+		"2": "Who is Asta's rival?",
+		"3": "What is the main character's grimoire?",
+		"4": "All of Noelle's family go to",
+		"5": "Who is Vanica's devil",
+		"6": "Who are the members of the Dark triad",
+		"7": "List one of the Arcane magic users.",
+		"8": "Who is the creator of Black Clover.",
+		"9": "Who are the main characters and where are they from?",
+		"10": "does asta have magic"
+	},
+	{
+		"1": {
+			"a": "Royal Capital",
+			"b": "Raquay",
+			"c": "Hage",
+			"d": "Castle Town"
+		},
+		"2": {
+			"a": "Gray",
+			"b": "Killua",
+			"c": "Yuno",
+			"d": "Sasuke"
+		},
+		"3": {
+			"a": "Four Leaf Clover",
+			"b": "Three Leaf Clover",
+			"c": "He doesn't have",
+			"d": "Five Leaf Clover"
+		},
+		"4": {
+			"a": "Silver Eagles",
+			"b": "Black Bulls",
+			"c": "Crimson",
+			"d": "None"
+		},
+		"5": {
+			"a": "Anti-magic devil",
+			"b": "Kotodama amgic devil",
+			"c": "Megicula",
+			"d": "Astaroth"
+		},
+		"6": {
+			"a": "Asta,Noelle,Yuno",
+			"b": "Dante,Vanica,Zenon",
+			"c": "Yami,Julios,William",
+			"d": "Vanessa,Finral,Luck"
+		},
+		"7": {
+			"a": "William Vangeance",
+			"b": "Licht",
+			"c": "Julius Novachrono",
+			"d": "Finral"
+		},
+		"8": {
+			"a": "Masashi Kishimoto",
+			"b": "Eiichiro Oda",
+			"c": "Akira Toriyama",
+			"d": "Yuki Tabata"
+		},
+		"9": {
+			"a": "Asta And Yuno, From Hage village",
+			"b": "Magna and Luck from saussy",
+			"c": "no idea",
+			"d": "Yami, Huge village"
+		},
+		"10": {
+			"a": "no",
+			"b": "yes",
+			"c": "some",
+			"d": "powerful magic"
+		}
+			
+	},
+	{
+		"1": "Hage",
+		"2": "Yuno",
+		"3": "Five Leaf Clover",
+		"4": "Silver Eagles",
+		"5": "Megicula",
+		"6": "Asta,Noelle,Yuno",
+		"7": "William Vangeance",
+		"8": "Yuki Tabata",
+		"9": "Asta And Yuno, From Hage village",
+		"10": "no"
+	}
+]

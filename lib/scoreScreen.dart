@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Resultscreen extends StatefulWidget {
-  int marks;
+ final int marks;
   Resultscreen({Key key, @required this.marks}) : super(key: key);
   @override
   _ResultsState createState() => _ResultsState(marks);
 }
 
 class _ResultsState extends State<Resultscreen> {
-  String img_address;
+  String imgaddress;
   String message;
   String score;
   int marks;
@@ -16,16 +16,16 @@ class _ResultsState extends State<Resultscreen> {
   @override
   void initState() {
     if (marks < 5) {
-      img_address = "assets/images/picka_confussed.gif";
+      imgaddress = "assets/images/picka_confussed.gif";
       message = "Not a Pokemon Fan ?  You need to brush up your knowledge...";
       score = marks.toString();
     } else if (marks > 4 && marks < 8) {
-      img_address = "assets/images/picka_improve.gif";
+      imgaddress = "assets/images/picka_improve.gif";
       message =
           "Pickachu is proud of you.. But there is still room for improvement";
       score = marks.toString();
     } else {
-      img_address = "assets/images/picka_happy.gif";
+      imgaddress = "assets/images/picka_happy.gif";
       message =
           "Ash Ketchum is that you? Pickachu is very happy and proud of you!";
       score = marks.toString();
@@ -46,7 +46,7 @@ class _ResultsState extends State<Resultscreen> {
             Container(
               child: Column(
                 children: <Widget>[
-                  Image.asset(img_address),
+                  Image.asset(imgaddress),
                   SizedBox(
                     height: 40,
                   ),

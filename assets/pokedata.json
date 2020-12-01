@@ -12,6 +12,8 @@
 		"10": "assets/images/tauros.png"
 			
 	},
+	
+	
 	{
 		"1": {
 			"a": "Flareon",
@@ -86,5 +88,18 @@
 		"8": "Rapidash",
 		"9": "Snorlax",
 		"10": "Tauros"
+	},
+	{
+		"1": "assets/images/AnsArcanine.png",
+		"2": "assets/images/AnsFearow.png",
+		"3": "assets/images/AnsGastly.png",
+		"4": "assets/images/AnsHypno.png",
+		"5": "assets/images/AnsIvysaur.png",
+		"6": "assets/images/AnsMoltres.png",
+		"7": "assets/images/AnsNidorino.png",
+		"8": "assets/images/AnsRapidash.png",
+		"9": "assets/images/AnsSnorlax.png",
+		"10": "assets/images/AnsTauros.png"
+			
 	}
 ]

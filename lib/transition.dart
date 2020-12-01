@@ -14,7 +14,7 @@ class _QuizState extends State<Quiz> {
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => getjson(),
+        builder: (context) => Getjson(),
       ));
     });
   }
