@@ -1,0 +1,90 @@
+[
+	{
+		"1": "assets/images/shoji.png",
+		"2": "assets/images/melissa.jpg",
+		"3": "assets/images/aizawa.png",
+		"4": "assets/images/cero.jpg",
+		"5": "assets/images/kaminari.jpg",
+		"6": "assets/images/jiro.jpg",
+		"7": "assets/images/ectoplasm.png",
+		"8": "assets/images/cementos.jpg",
+		"9": "assets/images/woods.jpg",
+		"10": "assets/images/kendo.jpg"
+			
+	},
+	{
+		"1": {
+			"a": "Nirengeki Shōda",
+			"b": "Mezō Shōji",
+			"c": "Fumikage Tokoyami",
+			"d": "Yūga Aoyama"
+		},
+		"2": {
+			"a": "Melissa Shield",
+			"b": "Ibara Shiozaki",
+			"c": "Yosetsu Awase",
+			"d": "Kōsei Tsuburaba"
+		},
+		"3": {
+			"a": "Nemuri Kayama",
+			"b": "Sekijirō Kan",
+			"c": "Ken Ishiyama",
+			"d": "Shōta Aizawa"
+		},
+		"4": {
+			"a": "Mashirao Ojiro",
+			"b": "Hanta Sero",
+			"c": "Kōji Kōda",
+			"d": "Rikidō Satō"
+		},
+		"5": {
+			"a": "Shōto Todoroki",
+			"b": "Denki Kaminari",
+			"c": "Minoru Mineta",
+			"d": "Eijirō Kirishima"
+		},
+		"6": {
+			"a": "Mina Ashido",
+			"b": "Ochaco Uraraka",
+			"c": "Tsuyu Asui",
+			"d": "Kyōka Jirō"
+		},
+		"7": {
+			"a": "Ryō Inui",
+			"b": "Hizashi Yamada",
+			"c": "Higari Maijima",
+			"d": "Ectoplasm"
+		},
+		"8": {
+			"a": "Texan McShoot",
+			"b": "Ken Ishiyama",
+			"c": "Chiyo Shuuzenji",
+			"d": "Nemuri Kayama"
+		},
+		"9": {
+			"a": "Shinya Kamihara",
+			"b": "Tsunagu Hakamata",
+			"c": "Shinji Nishiya",
+			"d": "Ryuko Tatsuma"
+		},
+		"10": {
+			"a": "Itsuka Kendō",
+			"b": "Jūzō Honenuki",
+			"c": "Kōsei Tsuburaba",
+			"d": "Yui Kodai"
+		}
+			
+	},
+	{
+		"1": "Mezō Shōji",
+		"2": "Melissa Shield",
+		"3": "Shōta Aizawa",
+		"4": "Hanta Sero",
+		"5": "Denki Kaminari",
+		"6": "Kyōka Jirō",
+		"7": "Ectoplasm",
+		"8": "Ken Ishiyama",
+		"9": "Shinji Nishiya",
+		"10": "Itsuka Kendō"
+	}
+]
